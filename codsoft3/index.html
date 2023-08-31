@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Aditya Raj</title>
+    <link rel="icon" href="/images/websitelogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ede38599a9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <video autoplay loop muted plays-inline class="backvideo">
+                <source src="/images/back-animation.mp4" type="video/mp4">
+            </video>
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>CSE Undergrad</p>
+                <h1>Hi, I'm <span>Aditya</span> Raj</h1>
+                <p>I'm in <span class="auto-type"></span></p>
+            </div>
+        </div>
+    </div>
+    <!-- ----------About------------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/photo.jfif" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am Second year CSE student at NIET. I keen to learn new technologies and always try to give my
+                        best to my work.
+                        I am familiar with development works. I have intermediate experience in Android, Web
+                        Development.
+                        I am also familiar with C, Java, Python and some other languages. I am also a avid problem
+                        solver.
+                        Always looking for an opportunity. I am also interested in Theoretical Computer Science.<br>
+
+                        Relevant Courseworks: Data Structures, Algorithm, Discrete Mathematics, TOC, Engg. Math,
+                        Operating Systems, DBMS</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('more')">More</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming languages</span><br>Familiar with C, Java, Python</li>
+                            <li><span>Web Development</span><br>Designing websites with HTML, CSS, JavaScript</li>
+                            <li><span>App Development</span><br>Making Android App with Java in Android Studio</li>
+                            <li><span>Databases</span><br>MySql, Sqllite</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020-present <br>NOIDA INSTITUTE OF ENGINEERING AND
+                                    Technology</span><br>B.Tech in CSE<br>CGPA: 9.39</li>
+                            <li><span>2020 Higher Secondary <br>STELLA MARIS INTER COLLEGE</span><br>Percentage: 91</li>
+                            <li><span>2018 Secondary <br>y</span><br>Percentage: 87.2%
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="more">
+                        <ul>
+                            <li><span>Location</span><br>Lucknow , Uttar Pradesh</li>
+                            <li><span>Languages</span><br>English, Hindi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- ----------Services------------- --->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Developing Responsive website with HTML, CSS, Javascript</p>
+                    <p>Some of my works: Weather Web App</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-android"></i>
+                    <h2>App Development</h2>
+                    <p>Making Android App using Java and JSON</p>
+                    <p>Some of my works: Foodie Android App</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------Contact-------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1>Contact Me</h1>
+                    <p><i class="fa-regular fa-envelope"></i> adityaraj7195stella@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91-9452977107</p>
+                    <div class="social-icons">
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <input type="tel" name="Tel" placeholder="Your Phone No." required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------Scroll to top--------->
+    <a href="#" class="totop"><i class="fa-solid fa-circle-chevron-up"></i></a>
+
+
+    <!--------------Scripts---------------->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["App Development", "Web Development"],
+            typeSpeed: 20,
+            backSpeed: 20,
+            loop: true
+        })
+    </script>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxWWKufsbG4-j6oLNdHA0NCS0uhH-YXiQ5z-T7S4xxqd5p6jFLit-QqLRn5kwmbcDob/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+    <script>
+        const toTop = document.querySelector(".totop");
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 200) {
+                toTop.classList.add("active");
+            } else {
+                toTop.classList.remove("active");
+            }
+        })
+    </script>
+</body>
+
+</html>
